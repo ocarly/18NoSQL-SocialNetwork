@@ -1,0 +1,19 @@
+{
+  "name": "18nosql-socialnetwork",
+  "version": "1.0.0",
+  "description": "NoSQL-socialNetwork",
+  "main": "server.js",
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^7.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  }
+}
+
