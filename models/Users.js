@@ -19,14 +19,14 @@ const UserSchema = new Schema(
     thoughts: [
       {
         type: Schema.Types.ObjectId,
-        ref: "Thoughts",
+        ref: "thoughts",
       },
     ],
 
     friends: [
       {
         type: Schema.Types.ObjectId,
-        ref: "Users",
+        ref: "users",
       },
     ],
   },
@@ -41,7 +41,7 @@ const UserSchema = new Schema(
 UserSchema.virtual("friendCount").get(function () {
   return this.friends.length;
 });
-
-const Users = model("Users", UserSchema);
+// lower-cased letter U
+const Users = model("users", UserSchema);
 
 module.exports = Users;
