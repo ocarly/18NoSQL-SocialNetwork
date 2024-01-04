@@ -8,21 +8,18 @@ const UserSchema = new Schema(
       trim: true,
       required: "Username is Required",
     },
-
     email: {
       type: String,
       unique: true,
       required: "Username is Required",
       match: [/.+@.+\..+/],
     },
-
     thoughts: [
       {
         type: Schema.Types.ObjectId,
         ref: "thoughts",
       },
     ],
-
     friends: [
       {
         type: Schema.Types.ObjectId,
@@ -41,7 +38,7 @@ const UserSchema = new Schema(
 UserSchema.virtual("friendCount").get(function () {
   return this.friends.length;
 });
-// lower-cased letter U
-const Users = model("users", UserSchema);
+
+const Users = model("Users", UserSchema);
 
 module.exports = Users;
